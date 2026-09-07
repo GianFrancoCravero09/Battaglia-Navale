@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Battaglia Navale</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+</head>
+
+<body class="py-4">
+
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3">BATTAGLIA NAVALE</h2>
+
+        <div class="row justify-content-center my-3">
+            
+            <div class="col-md-8 d-flex justify-content-around bg-secondary text-white p-3 rounded">
+                <div><strong>Tempo:</strong> <span id="orologio">0:00</span></div>
+                <div><strong>Effettuati:</strong> <span id="contLanci">0</span></div>
+                <div><strong>Rimanenti:</strong> <span id="contRimanenti">40</span></div>
+                <div><strong>Colpiti:</strong> <span id="contAsegno">0</span>/18</div>
+            </div>
+        </div>
+
+        <div id="notifica" class="fw-bold fs-5 text-warning my-2" style="min-height: 30px;"></div>
+
+
+        <div class="d-flex justify-content-center my-3">
+            <div id="tabellone" class="campo-gioco"></div>
+        </div>
+
+        <div id="esitoGioco"></div>
+
+
+        <div class="my-3">
+            <button class="btn btn-warning mx-2" onclick="riavviaPartita()">NUOVA PARTITA</button>
+            <button class="btn btn-outline-light mx-2 disabled" id="bottoneMostra" onclick="scopriNavi()">MOSTRA NAVI</button>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 contenitore-legenda text-start">
+                <h5 class="text-center mb-3">Legenda Navi</h5>
+                <div class="row">
+                    <div class="col-6 elemento-legenda"><span>1x Ammiraglia (4 caselle)</span> 🟥</div>
+                    <div class="col-6 elemento-legenda"><span>2x Navi medie (3 caselle)</span> 🟧 🟨</div>
+                    <div class="col-6 elemento-legenda"><span>3x Sottomarini (2 caselle)</span> 🟩 🟪 🩶</div>
+                    <div class="col-6 elemento-legenda"><span>2x Pattuglie (1 casella)</span> 🌸 🩵</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

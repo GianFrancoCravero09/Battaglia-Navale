@@ -1,0 +1,58 @@
+body {
+    background-color: #121824;
+    color: #f0f3f8;
+    font-family: Arial, sans-serif;
+}
+
+.campo-gioco {
+    width: min(90vw, 420px);
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+    background-color: #1a2332;
+    border: 3px solid #2c3e50;
+    border-radius: 8px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.casella {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.casella:hover {
+    opacity: 0.8;
+}
+
+.stato-acqua {
+    background-color: #3b82f6 !important;
+}
+
+.stato-colpito {
+    background-color: #ef4444 !important;
+}
+
+.blocco-griglia {
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.contenitore-legenda {
+    background-color: #1a2332;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.elemento-legenda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
